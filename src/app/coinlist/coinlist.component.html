@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="rows">
+    <div id="img">
+
+      <ng-container>
+        <button class="sort" (click)="sortByPrice({price:'desc'})">Desc</button>
+        <button class="sort" (click)="sortByPrice({price:'asc'})">Asc</button>
+        
+        <div class="item" *ngFor = "let coin of data">
+          <div class="icon" title="{{coin?.name}}">
+            <i class="cc-{{coin?.symbol}}"></i>
+          </div>
+          <div class="key">
+            <span class="name">{{coin?.name}}</span>
+            <input class="class" value="${{coin?.price_usd}}" readonly="">
+          </div>
+        </div>
+
+
+
+      </ng-container>
+
+    </div>
+  </div>
+
+</div>
