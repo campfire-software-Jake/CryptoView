@@ -120,7 +120,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_3__header_header_module__["a" /* HeaderModule */]
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */],
-                { provide: __WEBPACK_IMPORTED_MODULE_6__angular_common__["a" /* APP_BASE_HREF */], useValue: '/' },
+                { provide: __WEBPACK_IMPORTED_MODULE_6__angular_common__["a" /* APP_BASE_HREF */], useValue: './' },
                 { provide: __WEBPACK_IMPORTED_MODULE_6__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_6__angular_common__["d" /* HashLocationStrategy */] }],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
         })
