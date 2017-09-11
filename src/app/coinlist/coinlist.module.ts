@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common';
 import { NgModule, Component } from '@angular/core';
 import { CoinlistComponent } from './coinlist.component';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +13,8 @@ import { AppComponent } from '../app.component';
   imports: [
     FormsModule,
     HttpModule,
-    BrowserModule
+    BrowserModule,
+    CommonModule
   ],
   exports: [
     CoinlistComponent

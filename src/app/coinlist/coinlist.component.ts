@@ -15,6 +15,7 @@ export class CoinlistComponent {
 
   private apiUrl = 'https://api.coinmarketcap.com/v1/ticker/?limit=50';
   data: any = [];
+  shown: any;
 
   constructor(private http: Http) {
     this.getPrice();
@@ -37,12 +38,55 @@ export class CoinlistComponent {
       switch (value) {
         case "price":
           return this.sortCoins("price_usd", sorts[value])
-
       }
     }
-
-
   }
+
+  sortByVolume(sorts) {
+    for (let value in sorts) {
+      switch (value) {
+        case "volume":
+          return this.sortCoins("24h_volume_usd", sorts[value])
+      }
+    }
+  }
+
+  sortByPercentChange24h(sorts) {
+    for (let value in sorts) {
+      switch (value) {
+        case "percentChange24h":
+          return this.sortCoins("percent_change_24h", sorts[value])
+      }
+    }
+  }
+
+  sortByPercentChange7d(sorts) {
+    for (let value in sorts) {
+      switch (value) {
+        case "percentChange7d":
+          return this.sortCoins("percent_change_7d", sorts[value])
+      }
+    }
+  }
+
+  sortByPercentChange1h(sorts) {
+    for (let value in sorts) {
+      switch (value) {
+        case "percentChange1h":
+          return this.sortCoins("percent_change_1h", sorts[value])
+      }
+    }
+  }
+
+  sortByMarketCap(sorts) {
+    for (let value in sorts) {
+      switch (value) {
+        case "marketcap":
+          return this.sortCoins("market_cap_usd", sorts[value])
+      }
+    }
+  }
+
 
   sortCoins(propName, algo) {
     this.data.sort((a, b) => {
@@ -56,4 +100,8 @@ export class CoinlistComponent {
       }
     })
   }
+
+  
+
+  
 }

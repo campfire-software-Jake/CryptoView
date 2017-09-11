@@ -1,1515 +1,121 @@
 .container {
-  max-width: 960px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
 .rows {
-  display: flex;
-  /*background-color: whitesmoke;*/
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
-  padding: 0;
-  max-width: 980px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    background-color: #353535;
+    margin: 0 -360px 0 -360px;
+    padding: 0;
+}
+.sortButtonLayout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.rows img {
-  display: block;
-  float: left;
-  /*flex: 0 1 25%;*/
-  background-color: #fff;
-}
-
-i {
-  display: block;
-  height: 59px;
-  color: #333;
-}
-
-@media screen and (min-width: 1024px) {
-  .rows img {
-    width: calc(100%/6);
-    height: calc(100%/6);
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .rows img {
-    width: calc(100%/4);
-    height: calc(100%/4);
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .rows img {
-    width: calc(100%/3);
-    height: calc(100%/3);
-  }
-}
-
-@media screen and (min-width: 321px) and (max-width: 480px) {
-  .rows img {
-    width: calc(100%/2);
-    height: calc(100%/2);
-  }
-}
-
-@media screen  and (max-width: 320px) {
-  .rows img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/*! Cryptocoins - cryptocurrency icon font | https://github.com/allienworks/cryptocoins */
-
-@font-face {
-  font-family: "cryptocoins-icons";
-  src: url('./cryptocoins-icons.eot');
-  src: /*url('./cryptocoins-icons.eot?#iefix') format('eot'),*/
-    /*url('./cryptocoins-icons.woff2') format('woff2'),*/
-    url('./cryptocoins-icons.woff') format('woff'),
-    url('./cryptocoins-icons.ttf') format('truetype');
-    /*url('./cryptocoins-icons.svg#cryptocoins-icons') format('svg');*/
-}
-
-@font-face {
-  font-family: "icomoon";
-  src: url('./icomoon.eot');
-  src: url('./icomoon.woff') format('woff'),
-       url('./icomoon.ttf') format('truetype');
-}
-
-/* .cc:before { */
-[class*="cc-"]::before {
-  font-family: "cryptocoins-icons",
-               "icomoon";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
-  text-decoration: none;
-  text-transform: none;
-}
-
-
-.cc-ADC-alt:before {
-  content: "\E001";
-}
-
-.cc-ADC:before {
-  content: "\E002";
-}
-
-.cc-AEON-alt:before {
-  content: "\E003";
-}
-
-.cc-AEON:before {
-  content: "\E004";
-}
-
-.cc-AMP-alt:before {
-  content: "\E005";
-}
-
-.cc-AMP:before {
-  content: "\E006";
-}
-
-.cc-ANC-alt:before {
-  content: "\E007";
-}
-
-.cc-ANC:before {
-  content: "\E008";
-}
-
-.cc-ARCH-alt:before {
-  content: "\E009";
-}
-
-.cc-ARCH:before {
-  content: "\E00A";
-}
-
-.cc-ARDR-alt:before {
-  content: "\E00B";
-}
-
-.cc-ARDR:before {
-  content: "\E00C";
-}
-
-.cc-AUR-alt:before {
-  content: "\E00D";
-}
-
-.cc-AUR:before {
-  content: "\E00E";
-}
-
-.cc-BANX-alt:before {
-  content: "\E00F";
-}
-
-.cc-BANX:before {
-  content: "\E010";
-}
-
-.cc-BAT-alt:before {
-  content: "\E011";
-}
-
-.cc-BAT:before {
-  content: "\E012";
-}
-
-.cc-BAY-alt:before {
-  content: "\E013";
-}
-
-.cc-BAY:before {
-  content: "\E014";
-}
-
-.cc-BC-alt:before {
-  content: "\E015";
-}
-
-.cc-BC:before {
-  content: "\E016";
-}
-
-.cc-BCN-alt:before {
-  content: "\E017";
-}
-
-.cc-BCN:before {
-  content: "\E018";
-}
-
-.cc-BFT-alt:before {
-  content: "\E019";
-}
-
-.cc-BFT:before {
-  content: "\E01A";
-}
-
-.cc-BRK-alt:before {
-  content: "\E01B";
-}
-
-.cc-BRK:before {
-  content: "\E01C";
-}
-
-.cc-BRX-alt:before {
-  content: "\E01D";
-}
-
-.cc-BRX:before {
-  content: "\E01E";
-}
-
-.cc-BCH:before {
-  content: "\E022";
-}
-
-.cc-BSD-alt:before {
-  content: "\E01F";
-}
-
-.cc-BSD:before {
-  content: "\E020";
-}
-
-.cc-BTA:before {
-  content: "\E021";
-}
-
-.cc-BTC-alt:before {
-  content: "\E022";
-}
-
-.cc-BTC:before {
-  content: "\E023";
-}
-
-.cc-BTCD-alt:before {
-  content: "\E024";
-}
-
-.cc-BTCD:before {
-  content: "\E025";
-}
-
-.cc-BTS-alt:before {
-  content: "\E026";
-}
-
-.cc-BTS:before {
-  content: "\E027";
-}
-
-.cc-CLAM-alt:before {
-  content: "\E028";
-}
-
-.cc-CLAM:before {
-  content: "\E029";
-}
-
-.cc-CLOAK-alt:before {
-  content: "\E02A";
-}
-
-.cc-CLOAK:before {
-  content: "\E02B";
-}
-
-.cc-DAO-alt:before {
-  content: "\E02C";
-}
-
-.cc-DAO:before {
-  content: "\E02D";
-}
-
-.cc-DASH-alt:before {
-  content: "\E02E";
-}
-
-.cc-DASH:before {
-  content: "\E02F";
-}
-
-.cc-DCR-alt:before {
-  content: "\E030";
-}
-
-.cc-DCR:before {
-  content: "\E031";
-}
-
-.cc-DGB-alt:before {
-  content: "\E032";
-}
-
-.cc-DGB:before {
-  content: "\E033";
-}
-
-.cc-DGD:before {
-  content: "\E034";
-}
-
-.cc-DGX:before {
-  content: "\E035";
-}
-
-.cc-DMD-alt:before {
-  content: "\E036";
-}
-
-.cc-DMD:before {
-  content: "\E037";
-}
-
-.cc-DOGE-alt:before {
-  content: "\E038";
-}
-
-.cc-DOGE:before {
-  content: "\E039";
-}
-
-.cc-EMC-alt:before {
-  content: "\E03A";
-}
-
-.cc-EMC:before {
-  content: "\E03B";
-}
-
-.cc-ERC-alt:before {
-  content: "\E03C";
-}
-
-.cc-ERC:before {
-  content: "\E03D";
-}
-
-.cc-ETC-alt:before {
-  content: "\E03E";
-}
-
-.cc-ETC:before {
-  content: "\E03F";
-}
-
-.cc-ETH-alt:before {
-  content: "\E040";
-}
-
-.cc-ETH:before {
-  content: "\E041";
-}
-
-.cc-FC2-alt:before {
-  content: "\E042";
-}
-
-.cc-FC2:before {
-  content: "\E043";
-}
-
-.cc-FCT-alt:before {
-  content: "\E044";
-}
-
-.cc-FCT:before {
-  content: "\E045";
-}
-
-.cc-FLO-alt:before {
-  content: "\E046";
-}
-
-.cc-FLO:before {
-  content: "\E047";
-}
-
-.cc-FRK-alt:before {
-  content: "\E048";
-}
-
-.cc-FRK:before {
-  content: "\E049";
-}
-
-.cc-FTC-alt:before {
-  content: "\E04A";
-}
-
-.cc-FTC:before {
-  content: "\E04B";
-}
-
-.cc-GAME-alt:before {
-  content: "\E04C";
-}
-
-.cc-GAME:before {
-  content: "\E04D";
-}
-
-.cc-GDC-alt:before {
-  content: "\E04E";
-}
-
-.cc-GDC:before {
-  content: "\E04F";
-}
-
-.cc-GEMZ-alt:before {
-  content: "\E050";
-}
-
-.cc-GEMZ:before {
-  content: "\E051";
-}
-
-.cc-GLD-alt:before {
-  content: "\E052";
-}
-
-.cc-GLD:before {
-  content: "\E053";
-}
-
-.cc-GNO-alt:before {
-  content: "\E054";
-}
-
-.cc-GNO:before {
-  content: "\E055";
-}
-
-.cc-GNT-alt:before {
-  content: "\E056";
-}
-
-.cc-GNT:before {
-  content: "\E057";
-}
-
-.cc-GRC-alt:before {
-  content: "\E058";
-}
-
-.cc-GRC:before {
-  content: "\E059";
-}
-
-.cc-GRS:before {
-  content: "\E05A";
-}
-
-.cc-HEAT-alt:before {
-  content: "\E05B";
-}
-
-.cc-HEAT:before {
-  content: "\E05C";
-}
-
-.cc-ICN-alt:before {
-  content: "\E05D";
-}
-
-.cc-ICN:before {
-  content: "\E05E";
-}
-
-.cc-IFC-alt:before {
-  content: "\E05F";
-}
-
-.cc-IFC:before {
-  content: "\E060";
-}
-
-.cc-INCNT-alt:before {
-  content: "\E061";
-}
-
-.cc-INCNT:before {
-  content: "\E062";
-}
-
-.cc-IOC-alt:before {
-  content: "\E063";
-}
-
-.cc-IOC:before {
-  content: "\E064";
-}
-
-.cc-MIOTA-alt:before {
-  content: "\E065";
-}
-
-.cc-MIOTA:before {
-  content: "\E066";
-}
-
-.cc-JBS-alt:before {
-  content: "\E067";
-}
-
-.cc-JBS:before {
-  content: "\E068";
-}
-
-.cc-KMD-alt:before {
-  content: "\E069";
-}
-
-.cc-KMD:before {
-  content: "\E06A";
-}
-
-.cc-KOBO:before {
-  content: "\E06B";
-}
-
-.cc-KORE-alt:before {
-  content: "\E06C";
-}
-
-.cc-KORE:before {
-  content: "\E06D";
-}
-
-.cc-LBC-alt:before {
-  content: "\E06E";
-}
-
-.cc-LBC:before {
-  content: "\E06F";
-}
-
-.cc-LDOGE-alt:before {
-  content: "\E070";
-}
-
-.cc-LDOGE:before {
-  content: "\E071";
-}
-
-.cc-LISK-alt:before {
-  content: "\E072";
-}
-
-.cc-LISK:before {
-  content: "\E073";
-}
-
-.cc-LTC-alt:before {
-  content: "\E074";
-}
-
-.cc-LTC:before {
-  content: "\E075";
-}
-
-.cc-MAID-alt:before {
-  content: "\E076";
-}
-
-.cc-MAID:before {
-  content: "\E077";
-}
-
-.cc-MINT-alt:before {
-  content: "\E078";
-}
-
-.cc-MINT:before {
-  content: "\E079";
-}
-
-.cc-MONA-alt:before {
-  content: "\E07A";
-}
-
-.cc-MONA:before {
-  content: "\E07B";
-}
-
-.cc-MRC:before {
-  content: "\E07C";
-}
-
-.cc-MSC-alt:before {
-  content: "\E07D";
-}
-
-.cc-MSC:before {
-  content: "\E07E";
-}
-
-.cc-MTR-alt:before {
-  content: "\E07F";
-}
-
-.cc-MTR:before {
-  content: "\E080";
-}
-
-.cc-MUE-alt:before {
-  content: "\E081";
-}
-
-.cc-MUE:before {
-  content: "\E082";
-}
-
-.cc-NBT:before {
-  content: "\E083";
-}
-
-.cc-NEOS-alt:before {
-  content: "\E084";
-}
-
-.cc-NEOS:before {
-  content: "\E085";
-}
-
-.cc-NEU-alt:before {
-  content: "\E086";
-}
-
-.cc-NEU:before {
-  content: "\E087";
-}
-
-.cc-NLG-alt:before {
-  content: "\E088";
-}
-
-.cc-NLG:before {
-  content: "\E089";
-}
-
-.cc-NMC-alt:before {
-  content: "\E08A";
-}
-
-.cc-NMC:before {
-  content: "\E08B";
-}
-
-.cc-NOTE-alt:before {
-  content: "\E08C";
-}
-
-.cc-NOTE:before {
-  content: "\E08D";
-}
-
-.cc-NVC-alt:before {
-  content: "\E08E";
-}
-
-.cc-NVC:before {
-  content: "\E08F";
-}
-
-.cc-NXT-alt:before {
-  content: "\E090";
-}
-
-.cc-NXT:before {
-  content: "\E091";
-}
-
-.cc-OK-alt:before {
-  content: "\E092";
-}
-
-.cc-OK:before {
-  content: "\E093";
-}
-
-.cc-OMNI-alt:before {
-  content: "\E094";
-}
-
-.cc-OMNI:before {
-  content: "\E095";
-}
-
-.cc-OPAL-alt:before {
-  content: "\E096";
-}
-
-.cc-OPAL:before {
-  content: "\E097";
-}
-
-.cc-PIGGY-alt:before {
-  content: "\E098";
-}
-
-.cc-PIGGY:before {
-  content: "\E099";
-}
-
-.cc-PINK-alt:before {
-  content: "\E09A";
-}
-
-.cc-PINK:before {
-  content: "\E09B";
-}
-
-.cc-PIVX-alt:before {
-  content: "\E09C";
-}
-
-.cc-PIVX:before {
-  content: "\E09D";
-}
-
-.cc-POT-alt:before {
-  content: "\E09E";
-}
-
-.cc-POT:before {
-  content: "\E09F";
-}
-
-.cc-PPC-alt:before {
-  content: "\E0A0";
-}
-
-.cc-PPC:before {
-  content: "\E0A1";
-}
-
-.cc-QRK-alt:before {
-  content: "\E0A2";
-}
-
-.cc-QRK:before {
-  content: "\E0A3";
-}
-
-.cc-RADS-alt:before {
-  content: "\E0A4";
-}
-
-.cc-RADS:before {
-  content: "\E0A5";
-}
-
-.cc-RBIES-alt:before {
-  content: "\E0A6";
-}
-
-.cc-RBIES:before {
-  content: "\E0A7";
-}
-
-.cc-RBT-alt:before {
-  content: "\E0A8";
-}
-
-.cc-RBT:before {
-  content: "\E0A9";
-}
-
-.cc-RBY-alt:before {
-  content: "\E0AA";
-}
-
-.cc-RBY:before {
-  content: "\E0AB";
-}
-
-.cc-RDD-alt:before {
-  content: "\E0AC";
-}
-
-.cc-RDD:before {
-  content: "\E0AD";
-}
-
-.cc-REP-alt:before {
-  content: "\E0AE";
-}
-
-.cc-REP:before {
-  content: "\E0AF";
-}
-
-.cc-RISE-alt:before {
-  content: "\E0B0";
-}
-
-.cc-RISE:before {
-  content: "\E0B1";
-}
-
-.cc-SAR-alt:before {
-  content: "\E0B2";
-}
-
-.cc-SAR:before {
-  content: "\E0B3";
-}
-
-.cc-SCOT-alt:before {
-  content: "\E0B4";
-}
-
-.cc-SCOT:before {
-  content: "\E0B5";
-}
-
-.cc-SDC-alt:before {
-  content: "\E0B6";
-}
-
-.cc-SDC:before {
-  content: "\E0B7";
-}
-
-.cc-SIA-alt:before {
-  content: "\E0B8";
-}
-
-.cc-SIA:before {
-  content: "\E0B9";
-}
-
-.cc-SJCX-alt:before {
-  content: "\E0BA";
-}
-
-.cc-SJCX:before {
-  content: "\E0BB";
-}
-
-.cc-SLG-alt:before {
-  content: "\E0BC";
-}
-
-.cc-SLG:before {
-  content: "\E0BD";
-}
-
-.cc-SLS-alt:before {
-  content: "\E0BE";
-}
-
-.cc-SLS:before {
-  content: "\E0BF";
-}
-
-.cc-SNRG-alt:before {
-  content: "\E0C0";
-}
-
-.cc-SNRG:before {
-  content: "\E0C1";
-}
-
-.cc-START-alt:before {
-  content: "\E0C2";
-}
-
-.cc-START:before {
-  content: "\E0C3";
-}
-
-.cc-STEEM-alt:before {
-  content: "\E0C4";
-}
-
-.cc-STEEM:before {
-  content: "\E0C5";
-}
-
-.cc-STR-alt:before {
-  content: "\E0C6";
-}
-
-.cc-STR:before {
-  content: "\E0C7";
-}
-
-.cc-STRAT-alt:before {
-  content: "\E0C8";
-}
-
-.cc-STRAT:before {
-  content: "\E0C9";
-}
-
-.cc-SWIFT-alt:before {
-  content: "\E0CA";
-}
-
-.cc-SWIFT:before {
-  content: "\E0CB";
-}
-
-.cc-SYNC-alt:before {
-  content: "\E0CC";
-}
-
-.cc-SYNC:before {
-  content: "\E0CD";
-}
-
-.cc-SYS-alt:before {
-  content: "\E0CE";
-}
-
-.cc-SYS:before {
-  content: "\E0CF";
-}
-
-.cc-TRIG-alt:before {
-  content: "\E0D0";
-}
-
-.cc-TRIG:before {
-  content: "\E0D1";
-}
-
-.cc-TX-alt:before {
-  content: "\E0D2";
-}
-
-.cc-TX:before {
-  content: "\E0D3";
-}
-
-.cc-UBQ-alt:before {
-  content: "\E0D4";
-}
-
-.cc-UBQ:before {
-  content: "\E0D5";
-}
-
-.cc-UNITY-alt:before {
-  content: "\E0D6";
-}
-
-.cc-UNITY:before {
-  content: "\E0D7";
-}
-
-.cc-USDT-alt:before {
-  content: "\E0D8";
-}
-
-.cc-USDT:before {
-  content: "\E0D9";
-}
-
-.cc-VIOR-alt:before {
-  content: "\E0DA";
-}
-
-.cc-VIOR:before {
-  content: "\E0DB";
-}
-
-.cc-VNL-alt:before {
-  content: "\E0DC";
-}
-
-.cc-VNL:before {
-  content: "\E0DD";
-}
-
-.cc-VPN-alt:before {
-  content: "\E0DE";
-}
-
-.cc-VPN:before {
-  content: "\E0DF";
-}
-
-.cc-VRC-alt:before {
-  content: "\E0E0";
-}
-
-.cc-VRC:before {
-  content: "\E0E1";
-}
-
-.cc-VTC-alt:before {
-  content: "\E0E2";
-}
-
-.cc-VTC:before {
-  content: "\E0E3";
-}
-
-.cc-WAVES-alt:before {
-  content: "\E0E4";
-}
-
-.cc-WAVES:before {
-  content: "\E0E5";
-}
-
-.cc-XAI-alt:before {
-  content: "\E0E6";
-}
-
-.cc-XAI:before {
-  content: "\E0E7";
-}
-
-.cc-XBS-alt:before {
-  content: "\E0E8";
-}
-
-.cc-XBS:before {
-  content: "\E0E9";
-}
-
-.cc-XCP-alt:before {
-  content: "\E0EA";
-}
-
-.cc-XCP:before {
-  content: "\E0EB";
-}
-
-.cc-XEM-alt:before {
-  content: "\E0EC";
-}
-
-.cc-XEM:before {
-  content: "\E0ED";
-}
-
-.cc-XMR:before {
-  content: "\E0EE";
-}
-
-.cc-XPM-alt:before {
-  content: "\E0EF";
-}
-
-.cc-XPM:before {
-  content: "\E0F0";
-}
-
-.cc-XRP-alt:before {
-  content: "\E0F1";
-}
-
-.cc-XRP:before {
-  content: "\E0F2";
-}
-
-.cc-XVG-alt:before {
-  content: "\E0F3";
-}
-
-.cc-XVG:before {
-  content: "\E0F4";
-}
-
-.cc-YBC-alt:before {
-  content: "\E0F5";
-}
-
-.cc-YBC:before {
-  content: "\E0F6";
-}
-
-.cc-ZEC-alt:before {
-  content: "\E0F7";
-}
-
-.cc-ZEC:before {
-  content: "\E0F8";
-}
-
-.cc-ZEIT-alt:before {
-  content: "\E0F9";
-}
-
-.cc-ZEIT:before {
-  content: "\E0FA";
-}
-
-.cc-BCC:before {
-  content: "\E901";
-}
-
-.cc-LSK:before {
-  content: "\E902";
-}
-
-.cc-NEO:before {
-  content: "\E903";
-}
-
-.cc-OMG:before {
-  content: "\E905";
-}
-
-.cc-QTUM:before {
-  content: "\E906";
-}
-
-/*.cc-BCC:before {
-  content: "\E900";
-}
-
-.cc-BCC:before {
-  content: "\E900";
-}
-
-.cc-BCC:before {
-  content: "\E900";
-}
-
-.cc-BCC:before {
-  content: "\E900";
-}*/
-
-/* ---------COLORS--------- */
-
-@media only screen and (max-width: 40.063rem) {
-  .large-1, .large-2, .large-3, .large-4, .large-5, .large-6, .large-7, .large-8, .large-9, .large-10, .large-11, .large-12 {
-    width: 100%; } }
-
-.hide {
-  display: none; }
-
-.text-left {
-  text-align: left; }
-
-.text-right {
-  text-align: right; }
-
-.text-center {
-  text-align: center; }
-
-.tfx, #img .item i, #img .item:hover .key input, #img .icon, #img .name, #info #donate .ico i, #info #donate .svg *, a {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  transition: all 0.3s; }
-
-.button {
-  font-weight: bold;
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-  padding: 0.7rem 1.2rem;
-  border: 3px solid #6ed203;
-  border-radius: 4px; }
-  .button:hover {
-    background: #6ed203;
-    color: #fff; }
-  .button.tiny {
-    padding: 0.3rem 0.7rem;
-    font-size: 0.65rem; }
-  .button.small {
-    padding: 0.5rem 0.95rem;
-    font-size: 0.825rem; }
-  .button.large {
-    padding: 0.9rem 1.45rem;
-    font-size: 1.125rem; }
-  .button.huge {
-    padding: 1.1rem 1.9rem;
-    font-size: 1.35rem; }
-
-/* ---------------------------------------------------------------------------- *
-		Cryptocoins – custom styles
-
-\* ---------------------------------------------------------------------------- */
-
-
-h1, h2, h3 {
-  font-weight: 800;
-  color: #202020; }
-
-a {
-  color: #202020; }
-
-strong {
-  font-weight: 800;
-  color: #202020; }
-
-code {
-  font-size: 0.9rem;
-  color: #202020;
-  background: #e0e0e6;
-  border-radius: 4px;
-  border-bottom: 1px solid #c6c6cf;
-  padding: 0.2rem 0.5rem; }
-
-.button {
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #202020; }
-
-.box {
-  background: #fff;
-  box-shadow: 0 1px 5px #d5dee5; }
-
 .sort {
-  display: block;
-  margin: 0 auto;
-  padding: 1rem;
-  width: 25%;
-  border-radius: 0.5rem;
-  color: #fff;
-  font-size: 0.9rem;
-  font-family: "Roboto";
-  font-weight: 600;
-  background-color: slategray;
+    padding: 0.4rem;
+    width: 6rem;
+    height: 3rem;
+    color: #e0e0e6;
+    border: 1px solid rgba(224, 224, 230, 0.5);
+    font-size: 0.7rem;
+    font-family: "Roboto";
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: uppercase;
 }
-
-
+.group1, .group2, .group3, .group4, .group5, .group6 {
+  float: left;
+}
+.price, .volume, .twentyFourHour, .sevenDay, .oneHour {
+  margin-right: 12px;
+}
+.greenHover, .redHover {
+  transition: all 0.2s ease-in-out;
+  background-color: #353535;
+  font-weight: 700;
+}
+.greenHover:hover {
+  background-color: rgba(51, 204, 0, 0.5);
+  border: 2px solid #33FF00;
+}
+.redHover:hover {
+  background-color: rgba(251, 51, 0, 0.5);
+  border: 2px solid #FF3300;
+}
+.price:not(:last-child),
+.volume:not(:last-child), 
+.twentyFourHour:not(:last-child), 
+.sevenDay:not(:last-child), 
+.oneHour:not(:last-child), 
+.cap:not(:last-child) {
+  border-right: none;
+}
+.sortDisplayContainer {
+    width: 100%;
+    height: 3rem;
+}
+.currentSort {
+    text-align: center;
+}
+.currentSort h2 {
+    margin: 0 auto;
+    font-family: 'Roboto';
+    color: #e0e0e6;
+    font-size: 2em;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+.rows #img {
+    max-width: 960px;
+}
 #img {
-  margin: 3rem auto 2rem;
-  text-align: center; }
-  #img .item {
+    margin: 3rem auto 2rem;
+    text-align: center;
+}
+#img .item {
     display: inline-block;
     width: 120px;
     height: 150px;
-    background-color: #e5eff5;
+    background-image: url(../../assets/card_texture.png);
     border: 1px solid rgba(10, 10, 20, 0.25);
     border-radius: 2px;
-    box-shadow: 3px 3px 4px -1px rgba(31,31,31, 0.7);
+    box-shadow: 3px 3px 4px -1px rgba(31, 31, 31, 0.7);
     overflow: hidden;
-    margin: 13px 9px; }
-    #img .item:hover .icon {
-      transform: rotate(-14deg);
-      transform-origin: 50% 40%; }
-    #img .item:hover .name {
-      color: #202020; }
-    /*#img .item:hover .key input {
-      border-radius: 4px;
-      background: #fff;
-      box-shadow: 0 0 0 1px #ccc;
-      color: #202020; }*/
-    #img .item:hover i.cc-ARCH, #img .item:hover i.cc-ARCH-alt {
-      color: #002652; }
-    #img .item:hover i.cc-BANX, #img .item:hover i.cc-BANX-alt {
-      color: #225BA6; }
-    #img .item:hover i.cc-BC, #img .item:hover i.cc-BC-alt {
-      color: #202121; }
-    #img .item:hover i.cc-BCH {
-      color: #0f931A; }
-    #img .item:hover i.cc-BCN, #img .item:hover i.cc-BCN-alt {
-      color: #964F51; }
-    #img .item:hover i.cc-BTC, #img .item:hover i.cc-BTC-alt {
-      color: #F7931A; }
-    #img .item:hover i.cc-BTCD, #img .item:hover i.cc-BTCD-alt {
-      color: #2A72DC; }
-    #img .item:hover i.cc-BTS, #img .item:hover i.cc-BTS-alt {
-      color: #03A9E0; }
-    #img .item:hover i.cc-DASH, #img .item:hover i.cc-DASH-alt {
-      color: #1c75bc; }
-    #img .item:hover i.cc-DOGE, #img .item:hover i.cc-DOGE-alt {
-      color: #BA9F33; }
-    #img .item:hover i.cc-FC2, #img .item:hover i.cc-FC2-alt {
-      color: #040405; }
-    #img .item:hover i.cc-FTC, #img .item:hover i.cc-FTC-alt {
-      color: #679EF1; }
-    #img .item:hover i.cc-GEMZ, #img .item:hover i.cc-GEMZ-alt {
-      color: #e86060; }
-    #img .item:hover i.cc-GRC, #img .item:hover i.cc-GRC-alt {
-      color: #88A13C; }
-    #img .item:hover i.cc-IFC, #img .item:hover i.cc-IFC-alt {
-      color: #ed272d; }
-    #img .item:hover i.cc-KORE, #img .item:hover i.cc-KORE-alt {
-      color: #DF4124; }
-    #img .item:hover i.cc-LTC, #img .item:hover i.cc-LTC-alt {
-      color: #838383; }
-    #img .item:hover i.cc-MAID, #img .item:hover i.cc-MAID-alt {
-      color: #5492D6; }
-    #img .item:hover i.cc-MSC, #img .item:hover i.cc-MSC-alt {
-      color: #1D4983; }
-    #img .item:hover i.cc-NBT {
-      color: #FFC93D; }
-    #img .item:hover i.cc-NMC, #img .item:hover i.cc-NMC-alt {
-      color: #6787B7; }
-    #img .item:hover i.cc-NOTE, #img .item:hover i.cc-NOTE-alt {
-      color: #42daff; }
-    #img .item:hover i.cc-NXT, #img .item:hover i.cc-NXT-alt {
-      color: #008FBB; }
-    #img .item:hover i.cc-OPAL, #img .item:hover i.cc-OPAL-alt {
-      color: #7193AA; }
-    #img .item:hover i.cc-POT, #img .item:hover i.cc-POT-alt {
-      color: #105B2F; }
-    #img .item:hover i.cc-PPC, #img .item:hover i.cc-PPC-alt {
-      color: #3FA30C; }
-    #img .item:hover i.cc-QRK, #img .item:hover i.cc-QRK-alt {
-      color: #22AABF; }
-    #img .item:hover i.cc-RBT, #img .item:hover i.cc-RBT-alt {
-      color: #0d4982; }
-    #img .item:hover i.cc-SDC, #img .item:hover i.cc-SDC-alt {
-      color: #981D2D; }
-    #img .item:hover i.cc-STR, #img .item:hover i.cc-STR-alt {
-      color: #08B5E5; }
-    #img .item:hover i.cc-SYNC, #img .item:hover i.cc-SYNC-alt {
-      color: #008DD2; }
-    #img .item:hover i.cc-UNITY, #img .item:hover i.cc-UNITY-alt {
-      color: #ED8527; }
-    #img .item:hover i.cc-VIOR, #img .item:hover i.cc-VIOR-alt {
-      color: #1F52A4; }
-    #img .item:hover i.cc-VPN, #img .item:hover i.cc-VPN-alt {
-      color: #589700; }
-    #img .item:hover i.cc-VRC, #img .item:hover i.cc-VRC-alt {
-      color: #418bca; }
-    #img .item:hover i.cc-VTC, #img .item:hover i.cc-VTC-alt {
-      color: #1b5c2e; }
-    #img .item:hover i.cc-XBS, #img .item:hover i.cc-XBS-alt {
-      color: #dc2a25; }
-    #img .item:hover i.cc-XCP, #img .item:hover i.cc-XCP-alt {
-      color: #EC1550; }
-    #img .item:hover i.cc-XEM, #img .item:hover i.cc-XEM-alt {
-      color: #41bf76; }
-    #img .item:hover i.cc-XMR {
-      color: #FF6600; }
-    #img .item:hover i.cc-XRP, #img .item:hover i.cc-XRP-alt {
-      color: #346AA9; }
-    #img .item:hover i.cc-YBC, #img .item:hover i.cc-YBC-alt {
-      color: #D6C154; }
-    #img .item:hover i.cc-DMD, #img .item:hover i.cc-DMD-alt {
-      color: #5497b2; }
-    #img .item:hover i.cc-FRK, #img .item:hover i.cc-FRK-alt {
-      color: #0633cd; }
-    #img .item:hover i.cc-IOC, #img .item:hover i.cc-IOC-alt {
-      color: #2fa3de; }
-    #img .item:hover i.cc-LDOGE, #img .item:hover i.cc-LDOGE-alt {
-      color: #ffcc00; }
-    #img .item:hover i.cc-MTR, #img .item:hover i.cc-MTR-alt {
-      color: #b92429; }
-    #img .item:hover i.cc-MUE, #img .item:hover i.cc-MUE-alt {
-      color: #f5a10e; }
-    #img .item:hover i.cc-XAI, #img .item:hover i.cc-XAI-alt {
-      color: #2ef99f; }
-    #img .item:hover i.cc-XBS, #img .item:hover i.cc-XBS-alt {
-      color: #d3261d; }
-    #img .item:hover i.cc-XPM, #img .item:hover i.cc-XPM-alt {
-      color: #e5b625; }
-    #img .item:hover i.cc-BAY, #img .item:hover i.cc-BAY-alt {
-      color: #584ba1; }
-    #img .item:hover i.cc-DGB, #img .item:hover i.cc-DGB-alt {
-      color: #0066cc; }
-    #img .item:hover i.cc-DOGED, #img .item:hover i.cc-DOGED-alt {
-      color: #b2a675; }
-    #img .item:hover i.cc-EMC, #img .item:hover i.cc-EMC-alt {
-      color: #674c8c; }
-    #img .item:hover i.cc-ETH, #img .item:hover i.cc-ETH-alt {
-      color: #3b41f3; }
-    #img .item:hover i.cc-MINT, #img .item:hover i.cc-MINT-alt {
-      color: #006835; }
-    #img .item:hover i.cc-MONA, #img .item:hover i.cc-MONA-alt {
-      color: #a99364; }
-    #img .item:hover i.cc-MRC {
-      color: #4279bd; }
-    #img .item:hover i.cc-NEU, #img .item:hover i.cc-NEU-alt {
-      color: #2983c0; }
-    #img .item:hover i.cc-NVC, #img .item:hover i.cc-NVC-alt {
-      color: #ecab41; }
-    #img .item:hover i.cc-RBY, #img .item:hover i.cc-RBY-alt {
-      color: #c81100; }
-    #img .item:hover i.cc-AEON, #img .item:hover i.cc-AEON-alt {
-      color: #164450; }
-    #img .item:hover i.cc-AMP, #img .item:hover i.cc-AMP-alt {
-      color: #048DD2; }
-    #img .item:hover i.cc-ANC, #img .item:hover i.cc-ANC-alt {
-      color: #000; }
-    #img .item:hover i.cc-BTA {
-      color: #210094; }
-    #img .item:hover i.cc-CLAM, #img .item:hover i.cc-CLAM-alt {
-      color: #D6AB31; }
-    #img .item:hover i.cc-CLOAK, #img .item:hover i.cc-CLOAK-alt {
-      color: #DF3F1E; }
-    #img .item:hover i.cc-DCR, #img .item:hover i.cc-DCR-alt {
-      color: #43A2CA; }
-    #img .item:hover i.cc-NEOS, #img .item:hover i.cc-NEOS-alt {
-      color: #3771B1; }
-    #img .item:hover i.cc-NLG, #img .item:hover i.cc-NLG-alt {
-      color: #003E7E; }
-    #img .item:hover i.cc-OK, #img .item:hover i.cc-OK-alt {
-      color: #0165A4; }
-    #img .item:hover i.cc-OMNI, #img .item:hover i.cc-OMNI-alt {
-      color: #18347E; }
-    #img .item:hover i.cc-RBY, #img .item:hover i.cc-RBY-alt {
-      color: #D31F26; }
-    #img .item:hover i.cc-SCOT, #img .item:hover i.cc-SCOT-alt {
-      color: #3498DB; }
-    #img .item:hover i.cc-SJCX, #img .item:hover i.cc-SJCX-alt {
-      color: #003366; }
-    #img .item:hover i.cc-START, #img .item:hover i.cc-START-alt {
-      color: #01AEF0; }
-    #img .item:hover i.cc-SYS, #img .item:hover i.cc-SYS-alt {
-      color: #0098DA; }
-    #img .item:hover i.cc-VNL, #img .item:hover i.cc-VNL-alt {
-      color: #404249; }
-    #img .item:hover i.cc-TX, #img .item:hover i.cc-TX-alt {
-      color: #1F8BCC; }
-    #img .item:hover i.cc-XVG, #img .item:hover i.cc-XVG-alt {
-      color: #42AFB2; }
-    #img .item:hover i.cc-FCT, #img .item:hover i.cc-FCT-alt {
-      color: #2175BB; }
-    #img .item:hover i.cc-GDC, #img .item:hover i.cc-GDC-alt {
-      color: #E9A226; }
-    #img .item:hover i.cc-JBS, #img .item:hover i.cc-JBS-alt {
-      color: #1A8BCD; }
-    #img .item:hover i.cc-LISK, #img .item:hover i.cc-LISK-alt {
-      color: #1A6896; }
-    #img .item:hover i.cc-PIGGY, #img .item:hover i.cc-PIGGY-alt {
-      color: #F27A7A; }
-    #img .item:hover i.cc-RBIES, #img .item:hover i.cc-RBIES-alt {
-      color: #C62436; }
-    #img .item:hover i.cc-SAR, #img .item:hover i.cc-SAR-alt {
-      color: #1B72B8; }
-    #img .item:hover i.cc-SLG, #img .item:hover i.cc-SLG-alt {
-      color: #5A6875; }
-    #img .item:hover i.cc-USDT, #img .item:hover i.cc-USDT-alt {
-      color: #2CA07A; }
-    #img .item:hover i.cc-ZEIT, #img .item:hover i.cc-ZEIT-alt {
-      color: #ACACAC; }
-    #img .item:hover i.cc-DGD, #img .item:hover i.cc-DGX {
-      color: #D8A24A; }
-    #img .item:hover i.cc-ADC, #img .item:hover i.cc-ADC-alt {
-      color: #3CB0E5; }
-    #img .item:hover i.cc-BSD, #img .item:hover i.cc-BSD-alt {
-      color: #1186E7; }
-    #img .item:hover i.cc-DAO, #img .item:hover i.cc-DAO-alt {
-      color: #FF3B3B; }
-    #img .item:hover i.cc-ERC, #img .item:hover i.cc-ERC-alt {
-      color: #101E84; }
-    #img .item:hover i.cc-ETC, #img .item:hover i.cc-ETC-alt {
-      color: #669073; }
-    #img .item:hover i.cc-GLD, #img .item:hover i.cc-GLD-alt {
-      color: #E8BE24; }
-    #img .item:hover i.cc-GRS {
-      color: #648FA0; }
-    #img .item:hover i.cc-KOBO {
-      color: #80C342; }
-    #img .item:hover i.cc-LBC, #img .item:hover i.cc-LBC-alt {
-      color: #015C47; }
-    #img .item:hover i.cc-PINK, #img .item:hover i.cc-PINK-alt {
-      color: #ED31CA; }
-    #img .item:hover i.cc-RDD, #img .item:hover i.cc-RDD-alt {
-      color: #ED1C24; }
-    #img .item:hover i.cc-RISE, #img .item:hover i.cc-RISE-alt {
-      color: #43CEA2; }
-    #img .item:hover i.cc-SIA, #img .item:hover i.cc-SIA-alt {
-      color: #00CBA0; }
-    #img .item:hover i.cc-SLS, #img .item:hover i.cc-SLS-alt {
-      color: #1EB549; }
-    #img .item:hover i.cc-SNRG, #img .item:hover i.cc-SNRG-alt {
-      color: #160363; }
-    #img .item:hover i.cc-STEEM, #img .item:hover i.cc-STEEM-alt {
-      color: #1A5099; }
-    #img .item:hover i.cc-STRAT, #img .item:hover i.cc-STRAT-alt {
-      color: #33C7F5; }
-    #img .item:hover i.cc-SWIFT, #img .item:hover i.cc-SWIFT-alt {
-      color: #428BCA; }
-    #img .item:hover i.cc-MIOTA, #img .item:hover i.cc-MIOTA-alt {
-      color: #43ab7f; }
-    #img .item:hover i.cc-BCC {
-      color: darkorange; }
-    #img .item:hover i.cc-LSK {
-      color: #1a6896; }
-    #img .item:hover i.cc-NEO {
-      color: limegreen; }
-    #img .item:hover i.cc-OMG {
-      color: royalblue; }
-    #img .item:hover i.cc-QTUM {
-      color: cornflowerblue; }
-    #img .item:hover i.cc-WAVES {
-      color: dodgerblue; }
-    #img .item:hover i.cc-ZEC {
-      color: goldenrod; }
-
-
-  #img .icon {
+    margin: 13px 9px;
+}
+#img .item:hover .icon {
+    transform: rotate(-14deg);
+    transform-origin: 50% 40%;
+}
+#img .item:hover .name {
+    color: #202020;
+}
+#img .icon {
     margin-top: 8px;
     font-size: 3.2rem;
-    color: #202020; }
-
-  #img .name {
-    font-family: 'Lato';
+    color: #202020;
+}
+#img .name {
+    font-family: 'Roboto';
     font-size: 0.9rem;
-    font-weight: 500;
-    -webkit-font-smoothing: antialiased; }
-
-  #img .key {
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+#img .key {
     margin-top: 10px;
-    }  
-
-  #img .key input {
+}
+#img .key input {
     width: 100%;
     height: 1.4rem;
     margin: 15px auto 5px auto;
@@ -1521,4 +127,1306 @@ code {
     -webkit-font-smoothing: antialiased;
     color: forestgreen;
     background: none;
-    border: none; }
+    border: none;
+}
+#img .item i,
+#img .item:hover .key input,
+#img .icon,
+#img .name,
+a {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+i {
+    display: block;
+    height: 59px;
+    color: #333;
+}
+@media screen and (min-width: 1024px) {
+    .rows img {
+        width: calc(100%/6);
+        height: calc(100%/6);
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .rows img {
+        width: calc(100%/4);
+        height: calc(100%/4);
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .rows img {
+        width: calc(100%/3);
+        height: calc(100%/3);
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    .rows img {
+        width: calc(100%/2);
+        height: calc(100%/2);
+    }
+}
+@media screen and (max-width: 320px) {
+    .rows img {
+        width: 100%;
+        height: 100%;
+    }
+}
+/*------------------COIN FONTS AND HOVER EFFECTS------------------ */
+
+@font-face {
+    font-family: "cryptocoins-icons";
+    src: url('./cryptocoins-icons.eot');
+    src:
+    /*url('./cryptocoins-icons.eot?#iefix') format('eot'),*/
+    /*url('./cryptocoins-icons.woff2') format('woff2'),*/
+    
+    url('./cryptocoins-icons.woff') format('woff'), url('./cryptocoins-icons.ttf') format('truetype');
+    /*url('./cryptocoins-icons.svg#cryptocoins-icons') format('svg');*/
+}
+@font-face {
+    font-family: "icomoon";
+    src: url('./icomoon.eot');
+    src: url('./icomoon.woff') format('woff'), url('./icomoon.ttf') format('truetype');
+}
+/* .cc:before { */
+
+[class*="cc-"]::before {
+    font-family: "cryptocoins-icons", "icomoon";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+.cc-ADC-alt:before {
+    content: "\E001";
+}
+.cc-ADC:before {
+    content: "\E002";
+}
+.cc-AEON-alt:before {
+    content: "\E003";
+}
+.cc-AEON:before {
+    content: "\E004";
+}
+.cc-AMP-alt:before {
+    content: "\E005";
+}
+.cc-AMP:before {
+    content: "\E006";
+}
+.cc-ANC-alt:before {
+    content: "\E007";
+}
+.cc-ANC:before {
+    content: "\E008";
+}
+.cc-ARCH-alt:before {
+    content: "\E009";
+}
+.cc-ARCH:before {
+    content: "\E00A";
+}
+.cc-ARDR-alt:before {
+    content: "\E00B";
+}
+.cc-ARDR:before {
+    content: "\E00C";
+}
+.cc-AUR-alt:before {
+    content: "\E00D";
+}
+.cc-AUR:before {
+    content: "\E00E";
+}
+.cc-BANX-alt:before {
+    content: "\E00F";
+}
+.cc-BANX:before {
+    content: "\E010";
+}
+.cc-BAT-alt:before {
+    content: "\E011";
+}
+.cc-BAT:before {
+    content: "\E012";
+}
+.cc-BAY-alt:before {
+    content: "\E013";
+}
+.cc-BAY:before {
+    content: "\E014";
+}
+.cc-BC-alt:before {
+    content: "\E015";
+}
+.cc-BC:before {
+    content: "\E016";
+}
+.cc-BCN-alt:before {
+    content: "\E017";
+}
+.cc-BCN:before {
+    content: "\E018";
+}
+.cc-BFT-alt:before {
+    content: "\E019";
+}
+.cc-BFT:before {
+    content: "\E01A";
+}
+.cc-BRK-alt:before {
+    content: "\E01B";
+}
+.cc-BRK:before {
+    content: "\E01C";
+}
+.cc-BRX-alt:before {
+    content: "\E01D";
+}
+.cc-BRX:before {
+    content: "\E01E";
+}
+.cc-BCH:before {
+    content: "\E022";
+}
+.cc-BSD-alt:before {
+    content: "\E01F";
+}
+.cc-BSD:before {
+    content: "\E020";
+}
+.cc-BTA:before {
+    content: "\E021";
+}
+.cc-BTC-alt:before {
+    content: "\E022";
+}
+.cc-BTC:before {
+    content: "\E023";
+}
+.cc-BTCD-alt:before {
+    content: "\E024";
+}
+.cc-BTCD:before {
+    content: "\E025";
+}
+.cc-BTS-alt:before {
+    content: "\E026";
+}
+.cc-BTS:before {
+    content: "\E027";
+}
+.cc-CLAM-alt:before {
+    content: "\E028";
+}
+.cc-CLAM:before {
+    content: "\E029";
+}
+.cc-CLOAK-alt:before {
+    content: "\E02A";
+}
+.cc-CLOAK:before {
+    content: "\E02B";
+}
+.cc-DAO-alt:before {
+    content: "\E02C";
+}
+.cc-DAO:before {
+    content: "\E02D";
+}
+.cc-DASH-alt:before {
+    content: "\E02E";
+}
+.cc-DASH:before {
+    content: "\E02F";
+}
+.cc-DCR-alt:before {
+    content: "\E030";
+}
+.cc-DCR:before {
+    content: "\E031";
+}
+.cc-DGB-alt:before {
+    content: "\E032";
+}
+.cc-DGB:before {
+    content: "\E033";
+}
+.cc-DGD:before {
+    content: "\E034";
+}
+.cc-DGX:before {
+    content: "\E035";
+}
+.cc-DMD-alt:before {
+    content: "\E036";
+}
+.cc-DMD:before {
+    content: "\E037";
+}
+.cc-DOGE-alt:before {
+    content: "\E038";
+}
+.cc-DOGE:before {
+    content: "\E039";
+}
+.cc-EMC-alt:before {
+    content: "\E03A";
+}
+.cc-EMC:before {
+    content: "\E03B";
+}
+.cc-ERC-alt:before {
+    content: "\E03C";
+}
+.cc-ERC:before {
+    content: "\E03D";
+}
+.cc-ETC-alt:before {
+    content: "\E03E";
+}
+.cc-ETC:before {
+    content: "\E03F";
+}
+.cc-ETH-alt:before {
+    content: "\E040";
+}
+.cc-ETH:before {
+    content: "\E041";
+}
+.cc-FC2-alt:before {
+    content: "\E042";
+}
+.cc-FC2:before {
+    content: "\E043";
+}
+.cc-FCT-alt:before {
+    content: "\E044";
+}
+.cc-FCT:before {
+    content: "\E045";
+}
+.cc-FLO-alt:before {
+    content: "\E046";
+}
+.cc-FLO:before {
+    content: "\E047";
+}
+.cc-FRK-alt:before {
+    content: "\E048";
+}
+.cc-FRK:before {
+    content: "\E049";
+}
+.cc-FTC-alt:before {
+    content: "\E04A";
+}
+.cc-FTC:before {
+    content: "\E04B";
+}
+.cc-GAME-alt:before {
+    content: "\E04C";
+}
+.cc-GAME:before {
+    content: "\E04D";
+}
+.cc-GDC-alt:before {
+    content: "\E04E";
+}
+.cc-GDC:before {
+    content: "\E04F";
+}
+.cc-GEMZ-alt:before {
+    content: "\E050";
+}
+.cc-GEMZ:before {
+    content: "\E051";
+}
+.cc-GLD-alt:before {
+    content: "\E052";
+}
+.cc-GLD:before {
+    content: "\E053";
+}
+.cc-GNO-alt:before {
+    content: "\E054";
+}
+.cc-GNO:before {
+    content: "\E055";
+}
+.cc-GNT-alt:before {
+    content: "\E056";
+}
+.cc-GNT:before {
+    content: "\E057";
+}
+.cc-GRC-alt:before {
+    content: "\E058";
+}
+.cc-GRC:before {
+    content: "\E059";
+}
+.cc-GRS:before {
+    content: "\E05A";
+}
+.cc-HEAT-alt:before {
+    content: "\E05B";
+}
+.cc-HEAT:before {
+    content: "\E05C";
+}
+.cc-ICN-alt:before {
+    content: "\E05D";
+}
+.cc-ICN:before {
+    content: "\E05E";
+}
+.cc-IFC-alt:before {
+    content: "\E05F";
+}
+.cc-IFC:before {
+    content: "\E060";
+}
+.cc-INCNT-alt:before {
+    content: "\E061";
+}
+.cc-INCNT:before {
+    content: "\E062";
+}
+.cc-IOC-alt:before {
+    content: "\E063";
+}
+.cc-IOC:before {
+    content: "\E064";
+}
+.cc-MIOTA-alt:before {
+    content: "\E065";
+}
+.cc-MIOTA:before {
+    content: "\E066";
+}
+.cc-JBS-alt:before {
+    content: "\E067";
+}
+.cc-JBS:before {
+    content: "\E068";
+}
+.cc-KMD-alt:before {
+    content: "\E069";
+}
+.cc-KMD:before {
+    content: "\E06A";
+}
+.cc-KOBO:before {
+    content: "\E06B";
+}
+.cc-KORE-alt:before {
+    content: "\E06C";
+}
+.cc-KORE:before {
+    content: "\E06D";
+}
+.cc-LBC-alt:before {
+    content: "\E06E";
+}
+.cc-LBC:before {
+    content: "\E06F";
+}
+.cc-LDOGE-alt:before {
+    content: "\E070";
+}
+.cc-LDOGE:before {
+    content: "\E071";
+}
+.cc-LISK-alt:before {
+    content: "\E072";
+}
+.cc-LISK:before {
+    content: "\E073";
+}
+.cc-LTC-alt:before {
+    content: "\E074";
+}
+.cc-LTC:before {
+    content: "\E075";
+}
+.cc-MAID-alt:before {
+    content: "\E076";
+}
+.cc-MAID:before {
+    content: "\E077";
+}
+.cc-MINT-alt:before {
+    content: "\E078";
+}
+.cc-MINT:before {
+    content: "\E079";
+}
+.cc-MONA-alt:before {
+    content: "\E07A";
+}
+.cc-MONA:before {
+    content: "\E07B";
+}
+.cc-MRC:before {
+    content: "\E07C";
+}
+.cc-MSC-alt:before {
+    content: "\E07D";
+}
+.cc-MSC:before {
+    content: "\E07E";
+}
+.cc-MTR-alt:before {
+    content: "\E07F";
+}
+.cc-MTR:before {
+    content: "\E080";
+}
+.cc-MUE-alt:before {
+    content: "\E081";
+}
+.cc-MUE:before {
+    content: "\E082";
+}
+.cc-NBT:before {
+    content: "\E083";
+}
+.cc-NEOS-alt:before {
+    content: "\E084";
+}
+.cc-NEOS:before {
+    content: "\E085";
+}
+.cc-NEU-alt:before {
+    content: "\E086";
+}
+.cc-NEU:before {
+    content: "\E087";
+}
+.cc-NLG-alt:before {
+    content: "\E088";
+}
+.cc-NLG:before {
+    content: "\E089";
+}
+.cc-NMC-alt:before {
+    content: "\E08A";
+}
+.cc-NMC:before {
+    content: "\E08B";
+}
+.cc-NOTE-alt:before {
+    content: "\E08C";
+}
+.cc-NOTE:before {
+    content: "\E08D";
+}
+.cc-NVC-alt:before {
+    content: "\E08E";
+}
+.cc-NVC:before {
+    content: "\E08F";
+}
+.cc-NXT-alt:before {
+    content: "\E090";
+}
+.cc-NXT:before {
+    content: "\E091";
+}
+.cc-OK-alt:before {
+    content: "\E092";
+}
+.cc-OK:before {
+    content: "\E093";
+}
+.cc-OMNI-alt:before {
+    content: "\E094";
+}
+.cc-OMNI:before {
+    content: "\E095";
+}
+.cc-OPAL-alt:before {
+    content: "\E096";
+}
+.cc-OPAL:before {
+    content: "\E097";
+}
+.cc-PIGGY-alt:before {
+    content: "\E098";
+}
+.cc-PIGGY:before {
+    content: "\E099";
+}
+.cc-PINK-alt:before {
+    content: "\E09A";
+}
+.cc-PINK:before {
+    content: "\E09B";
+}
+.cc-PIVX-alt:before {
+    content: "\E09C";
+}
+.cc-PIVX:before {
+    content: "\E09D";
+}
+.cc-POT-alt:before {
+    content: "\E09E";
+}
+.cc-POT:before {
+    content: "\E09F";
+}
+.cc-PPC-alt:before {
+    content: "\E0A0";
+}
+.cc-PPC:before {
+    content: "\E0A1";
+}
+.cc-QRK-alt:before {
+    content: "\E0A2";
+}
+.cc-QRK:before {
+    content: "\E0A3";
+}
+.cc-RADS-alt:before {
+    content: "\E0A4";
+}
+.cc-RADS:before {
+    content: "\E0A5";
+}
+.cc-RBIES-alt:before {
+    content: "\E0A6";
+}
+.cc-RBIES:before {
+    content: "\E0A7";
+}
+.cc-RBT-alt:before {
+    content: "\E0A8";
+}
+.cc-RBT:before {
+    content: "\E0A9";
+}
+.cc-RBY-alt:before {
+    content: "\E0AA";
+}
+.cc-RBY:before {
+    content: "\E0AB";
+}
+.cc-RDD-alt:before {
+    content: "\E0AC";
+}
+.cc-RDD:before {
+    content: "\E0AD";
+}
+.cc-REP-alt:before {
+    content: "\E0AE";
+}
+.cc-REP:before {
+    content: "\E0AF";
+}
+.cc-RISE-alt:before {
+    content: "\E0B0";
+}
+.cc-RISE:before {
+    content: "\E0B1";
+}
+.cc-SAR-alt:before {
+    content: "\E0B2";
+}
+.cc-SAR:before {
+    content: "\E0B3";
+}
+.cc-SCOT-alt:before {
+    content: "\E0B4";
+}
+.cc-SCOT:before {
+    content: "\E0B5";
+}
+.cc-SDC-alt:before {
+    content: "\E0B6";
+}
+.cc-SDC:before {
+    content: "\E0B7";
+}
+.cc-SIA-alt:before {
+    content: "\E0B8";
+}
+.cc-SIA:before {
+    content: "\E0B9";
+}
+.cc-SJCX-alt:before {
+    content: "\E0BA";
+}
+.cc-SJCX:before {
+    content: "\E0BB";
+}
+.cc-SLG-alt:before {
+    content: "\E0BC";
+}
+.cc-SLG:before {
+    content: "\E0BD";
+}
+.cc-SLS-alt:before {
+    content: "\E0BE";
+}
+.cc-SLS:before {
+    content: "\E0BF";
+}
+.cc-SNRG-alt:before {
+    content: "\E0C0";
+}
+.cc-SNRG:before {
+    content: "\E0C1";
+}
+.cc-START-alt:before {
+    content: "\E0C2";
+}
+.cc-START:before {
+    content: "\E0C3";
+}
+.cc-STEEM-alt:before {
+    content: "\E0C4";
+}
+.cc-STEEM:before {
+    content: "\E0C5";
+}
+.cc-STR-alt:before {
+    content: "\E0C6";
+}
+.cc-STR:before {
+    content: "\E0C7";
+}
+.cc-STRAT-alt:before {
+    content: "\E0C8";
+}
+.cc-STRAT:before {
+    content: "\E0C9";
+}
+.cc-SWIFT-alt:before {
+    content: "\E0CA";
+}
+.cc-SWIFT:before {
+    content: "\E0CB";
+}
+.cc-SYNC-alt:before {
+    content: "\E0CC";
+}
+.cc-SYNC:before {
+    content: "\E0CD";
+}
+.cc-SYS-alt:before {
+    content: "\E0CE";
+}
+.cc-SYS:before {
+    content: "\E0CF";
+}
+.cc-TRIG-alt:before {
+    content: "\E0D0";
+}
+.cc-TRIG:before {
+    content: "\E0D1";
+}
+.cc-TX-alt:before {
+    content: "\E0D2";
+}
+.cc-TX:before {
+    content: "\E0D3";
+}
+.cc-UBQ-alt:before {
+    content: "\E0D4";
+}
+.cc-UBQ:before {
+    content: "\E0D5";
+}
+.cc-UNITY-alt:before {
+    content: "\E0D6";
+}
+.cc-UNITY:before {
+    content: "\E0D7";
+}
+.cc-USDT-alt:before {
+    content: "\E0D8";
+}
+.cc-USDT:before {
+    content: "\E0D9";
+}
+.cc-VIOR-alt:before {
+    content: "\E0DA";
+}
+.cc-VIOR:before {
+    content: "\E0DB";
+}
+.cc-VNL-alt:before {
+    content: "\E0DC";
+}
+.cc-VNL:before {
+    content: "\E0DD";
+}
+.cc-VPN-alt:before {
+    content: "\E0DE";
+}
+.cc-VPN:before {
+    content: "\E0DF";
+}
+.cc-VRC-alt:before {
+    content: "\E0E0";
+}
+.cc-VRC:before {
+    content: "\E0E1";
+}
+.cc-VTC-alt:before {
+    content: "\E0E2";
+}
+.cc-VTC:before {
+    content: "\E0E3";
+}
+.cc-WAVES-alt:before {
+    content: "\E0E4";
+}
+.cc-WAVES:before {
+    content: "\E0E5";
+}
+.cc-XAI-alt:before {
+    content: "\E0E6";
+}
+.cc-XAI:before {
+    content: "\E0E7";
+}
+.cc-XBS-alt:before {
+    content: "\E0E8";
+}
+.cc-XBS:before {
+    content: "\E0E9";
+}
+.cc-XCP-alt:before {
+    content: "\E0EA";
+}
+.cc-XCP:before {
+    content: "\E0EB";
+}
+.cc-XEM-alt:before {
+    content: "\E0EC";
+}
+.cc-XEM:before {
+    content: "\E0ED";
+}
+.cc-XMR:before {
+    content: "\E0EE";
+}
+.cc-XPM-alt:before {
+    content: "\E0EF";
+}
+.cc-XPM:before {
+    content: "\E0F0";
+}
+.cc-XRP-alt:before {
+    content: "\E0F1";
+}
+.cc-XRP:before {
+    content: "\E0F2";
+}
+.cc-XVG-alt:before {
+    content: "\E0F3";
+}
+.cc-XVG:before {
+    content: "\E0F4";
+}
+.cc-YBC-alt:before {
+    content: "\E0F5";
+}
+.cc-YBC:before {
+    content: "\E0F6";
+}
+.cc-ZEC-alt:before {
+    content: "\E0F7";
+}
+.cc-ZEC:before {
+    content: "\E0F8";
+}
+.cc-ZEIT-alt:before {
+    content: "\E0F9";
+}
+.cc-ZEIT:before {
+    content: "\E0FA";
+}
+.cc-BCC:before {
+    content: "\E901";
+}
+.cc-LSK:before {
+    content: "\E902";
+}
+.cc-NEO:before {
+    content: "\E903";
+}
+.cc-OMG:before {
+    content: "\E905";
+}
+.cc-QTUM:before {
+    content: "\E906";
+}
+#img .item:hover i.cc-ARCH,
+#img .item:hover i.cc-ARCH-alt {
+    color: #002652;
+}
+#img .item:hover i.cc-BANX,
+#img .item:hover i.cc-BANX-alt {
+    color: #225BA6;
+}
+#img .item:hover i.cc-BC,
+#img .item:hover i.cc-BC-alt {
+    color: #202121;
+}
+#img .item:hover i.cc-BCH {
+    color: #0f931A;
+}
+#img .item:hover i.cc-BCN,
+#img .item:hover i.cc-BCN-alt {
+    color: #964F51;
+}
+#img .item:hover i.cc-BTC,
+#img .item:hover i.cc-BTC-alt {
+    color: #F7931A;
+}
+#img .item:hover i.cc-BTCD,
+#img .item:hover i.cc-BTCD-alt {
+    color: #2A72DC;
+}
+#img .item:hover i.cc-BTS,
+#img .item:hover i.cc-BTS-alt {
+    color: #03A9E0;
+}
+#img .item:hover i.cc-DASH,
+#img .item:hover i.cc-DASH-alt {
+    color: #1c75bc;
+}
+#img .item:hover i.cc-DOGE,
+#img .item:hover i.cc-DOGE-alt {
+    color: #BA9F33;
+}
+#img .item:hover i.cc-FC2,
+#img .item:hover i.cc-FC2-alt {
+    color: #040405;
+}
+#img .item:hover i.cc-FTC,
+#img .item:hover i.cc-FTC-alt {
+    color: #679EF1;
+}
+#img .item:hover i.cc-GEMZ,
+#img .item:hover i.cc-GEMZ-alt {
+    color: #e86060;
+}
+#img .item:hover i.cc-GRC,
+#img .item:hover i.cc-GRC-alt {
+    color: #88A13C;
+}
+#img .item:hover i.cc-IFC,
+#img .item:hover i.cc-IFC-alt {
+    color: #ed272d;
+}
+#img .item:hover i.cc-KORE,
+#img .item:hover i.cc-KORE-alt {
+    color: #DF4124;
+}
+#img .item:hover i.cc-LTC,
+#img .item:hover i.cc-LTC-alt {
+    color: #838383;
+}
+#img .item:hover i.cc-MAID,
+#img .item:hover i.cc-MAID-alt {
+    color: #5492D6;
+}
+#img .item:hover i.cc-MSC,
+#img .item:hover i.cc-MSC-alt {
+    color: #1D4983;
+}
+#img .item:hover i.cc-NBT {
+    color: #FFC93D;
+}
+#img .item:hover i.cc-NMC,
+#img .item:hover i.cc-NMC-alt {
+    color: #6787B7;
+}
+#img .item:hover i.cc-NOTE,
+#img .item:hover i.cc-NOTE-alt {
+    color: #42daff;
+}
+#img .item:hover i.cc-NXT,
+#img .item:hover i.cc-NXT-alt {
+    color: #008FBB;
+}
+#img .item:hover i.cc-OPAL,
+#img .item:hover i.cc-OPAL-alt {
+    color: #7193AA;
+}
+#img .item:hover i.cc-POT,
+#img .item:hover i.cc-POT-alt {
+    color: #105B2F;
+}
+#img .item:hover i.cc-PPC,
+#img .item:hover i.cc-PPC-alt {
+    color: #3FA30C;
+}
+#img .item:hover i.cc-QRK,
+#img .item:hover i.cc-QRK-alt {
+    color: #22AABF;
+}
+#img .item:hover i.cc-RBT,
+#img .item:hover i.cc-RBT-alt {
+    color: #0d4982;
+}
+#img .item:hover i.cc-SDC,
+#img .item:hover i.cc-SDC-alt {
+    color: #981D2D;
+}
+#img .item:hover i.cc-STR,
+#img .item:hover i.cc-STR-alt {
+    color: #08B5E5;
+}
+#img .item:hover i.cc-SYNC,
+#img .item:hover i.cc-SYNC-alt {
+    color: #008DD2;
+}
+#img .item:hover i.cc-UNITY,
+#img .item:hover i.cc-UNITY-alt {
+    color: #ED8527;
+}
+#img .item:hover i.cc-VIOR,
+#img .item:hover i.cc-VIOR-alt {
+    color: #1F52A4;
+}
+#img .item:hover i.cc-VPN,
+#img .item:hover i.cc-VPN-alt {
+    color: #589700;
+}
+#img .item:hover i.cc-VRC,
+#img .item:hover i.cc-VRC-alt {
+    color: #418bca;
+}
+#img .item:hover i.cc-VTC,
+#img .item:hover i.cc-VTC-alt {
+    color: #1b5c2e;
+}
+#img .item:hover i.cc-XBS,
+#img .item:hover i.cc-XBS-alt {
+    color: #dc2a25;
+}
+#img .item:hover i.cc-XCP,
+#img .item:hover i.cc-XCP-alt {
+    color: #EC1550;
+}
+#img .item:hover i.cc-XEM,
+#img .item:hover i.cc-XEM-alt {
+    color: #41bf76;
+}
+#img .item:hover i.cc-XMR {
+    color: #FF6600;
+}
+#img .item:hover i.cc-XRP,
+#img .item:hover i.cc-XRP-alt {
+    color: #346AA9;
+}
+#img .item:hover i.cc-YBC,
+#img .item:hover i.cc-YBC-alt {
+    color: #D6C154;
+}
+#img .item:hover i.cc-DMD,
+#img .item:hover i.cc-DMD-alt {
+    color: #5497b2;
+}
+#img .item:hover i.cc-FRK,
+#img .item:hover i.cc-FRK-alt {
+    color: #0633cd;
+}
+#img .item:hover i.cc-IOC,
+#img .item:hover i.cc-IOC-alt {
+    color: #2fa3de;
+}
+#img .item:hover i.cc-LDOGE,
+#img .item:hover i.cc-LDOGE-alt {
+    color: #ffcc00;
+}
+#img .item:hover i.cc-MTR,
+#img .item:hover i.cc-MTR-alt {
+    color: #b92429;
+}
+#img .item:hover i.cc-MUE,
+#img .item:hover i.cc-MUE-alt {
+    color: #f5a10e;
+}
+#img .item:hover i.cc-XAI,
+#img .item:hover i.cc-XAI-alt {
+    color: #2ef99f;
+}
+#img .item:hover i.cc-XBS,
+#img .item:hover i.cc-XBS-alt {
+    color: #d3261d;
+}
+#img .item:hover i.cc-XPM,
+#img .item:hover i.cc-XPM-alt {
+    color: #e5b625;
+}
+#img .item:hover i.cc-BAY,
+#img .item:hover i.cc-BAY-alt {
+    color: #584ba1;
+}
+#img .item:hover i.cc-DGB,
+#img .item:hover i.cc-DGB-alt {
+    color: #0066cc;
+}
+#img .item:hover i.cc-DOGED,
+#img .item:hover i.cc-DOGED-alt {
+    color: #b2a675;
+}
+#img .item:hover i.cc-EMC,
+#img .item:hover i.cc-EMC-alt {
+    color: #674c8c;
+}
+#img .item:hover i.cc-ETH,
+#img .item:hover i.cc-ETH-alt {
+    color: #3b41f3;
+}
+#img .item:hover i.cc-MINT,
+#img .item:hover i.cc-MINT-alt {
+    color: #006835;
+}
+#img .item:hover i.cc-MONA,
+#img .item:hover i.cc-MONA-alt {
+    color: #a99364;
+}
+#img .item:hover i.cc-MRC {
+    color: #4279bd;
+}
+#img .item:hover i.cc-NEU,
+#img .item:hover i.cc-NEU-alt {
+    color: #2983c0;
+}
+#img .item:hover i.cc-NVC,
+#img .item:hover i.cc-NVC-alt {
+    color: #ecab41;
+}
+#img .item:hover i.cc-RBY,
+#img .item:hover i.cc-RBY-alt {
+    color: #c81100;
+}
+#img .item:hover i.cc-AEON,
+#img .item:hover i.cc-AEON-alt {
+    color: #164450;
+}
+#img .item:hover i.cc-AMP,
+#img .item:hover i.cc-AMP-alt {
+    color: #048DD2;
+}
+#img .item:hover i.cc-ANC,
+#img .item:hover i.cc-ANC-alt {
+    color: #000;
+}
+#img .item:hover i.cc-BTA {
+    color: #210094;
+}
+#img .item:hover i.cc-CLAM,
+#img .item:hover i.cc-CLAM-alt {
+    color: #D6AB31;
+}
+#img .item:hover i.cc-CLOAK,
+#img .item:hover i.cc-CLOAK-alt {
+    color: #DF3F1E;
+}
+#img .item:hover i.cc-DCR,
+#img .item:hover i.cc-DCR-alt {
+    color: #43A2CA;
+}
+#img .item:hover i.cc-NEOS,
+#img .item:hover i.cc-NEOS-alt {
+    color: #3771B1;
+}
+#img .item:hover i.cc-NLG,
+#img .item:hover i.cc-NLG-alt {
+    color: #003E7E;
+}
+#img .item:hover i.cc-OK,
+#img .item:hover i.cc-OK-alt {
+    color: #0165A4;
+}
+#img .item:hover i.cc-OMNI,
+#img .item:hover i.cc-OMNI-alt {
+    color: #18347E;
+}
+#img .item:hover i.cc-RBY,
+#img .item:hover i.cc-RBY-alt {
+    color: #D31F26;
+}
+#img .item:hover i.cc-SCOT,
+#img .item:hover i.cc-SCOT-alt {
+    color: #3498DB;
+}
+#img .item:hover i.cc-SJCX,
+#img .item:hover i.cc-SJCX-alt {
+    color: #003366;
+}
+#img .item:hover i.cc-START,
+#img .item:hover i.cc-START-alt {
+    color: #01AEF0;
+}
+#img .item:hover i.cc-SYS,
+#img .item:hover i.cc-SYS-alt {
+    color: #0098DA;
+}
+#img .item:hover i.cc-VNL,
+#img .item:hover i.cc-VNL-alt {
+    color: #404249;
+}
+#img .item:hover i.cc-TX,
+#img .item:hover i.cc-TX-alt {
+    color: #1F8BCC;
+}
+#img .item:hover i.cc-XVG,
+#img .item:hover i.cc-XVG-alt {
+    color: #42AFB2;
+}
+#img .item:hover i.cc-FCT,
+#img .item:hover i.cc-FCT-alt {
+    color: #2175BB;
+}
+#img .item:hover i.cc-GDC,
+#img .item:hover i.cc-GDC-alt {
+    color: #E9A226;
+}
+#img .item:hover i.cc-JBS,
+#img .item:hover i.cc-JBS-alt {
+    color: #1A8BCD;
+}
+#img .item:hover i.cc-LISK,
+#img .item:hover i.cc-LISK-alt {
+    color: #1A6896;
+}
+#img .item:hover i.cc-PIGGY,
+#img .item:hover i.cc-PIGGY-alt {
+    color: #F27A7A;
+}
+#img .item:hover i.cc-RBIES,
+#img .item:hover i.cc-RBIES-alt {
+    color: #C62436;
+}
+#img .item:hover i.cc-SAR,
+#img .item:hover i.cc-SAR-alt {
+    color: #1B72B8;
+}
+#img .item:hover i.cc-SLG,
+#img .item:hover i.cc-SLG-alt {
+    color: #5A6875;
+}
+#img .item:hover i.cc-USDT,
+#img .item:hover i.cc-USDT-alt {
+    color: #2CA07A;
+}
+#img .item:hover i.cc-ZEIT,
+#img .item:hover i.cc-ZEIT-alt {
+    color: #ACACAC;
+}
+#img .item:hover i.cc-DGD,
+#img .item:hover i.cc-DGX {
+    color: #D8A24A;
+}
+#img .item:hover i.cc-ADC,
+#img .item:hover i.cc-ADC-alt {
+    color: #3CB0E5;
+}
+#img .item:hover i.cc-BSD,
+#img .item:hover i.cc-BSD-alt {
+    color: #1186E7;
+}
+#img .item:hover i.cc-DAO,
+#img .item:hover i.cc-DAO-alt {
+    color: #FF3B3B;
+}
+#img .item:hover i.cc-ERC,
+#img .item:hover i.cc-ERC-alt {
+    color: #101E84;
+}
+#img .item:hover i.cc-ETC,
+#img .item:hover i.cc-ETC-alt {
+    color: #669073;
+}
+#img .item:hover i.cc-GLD,
+#img .item:hover i.cc-GLD-alt {
+    color: #E8BE24;
+}
+#img .item:hover i.cc-GRS {
+    color: #648FA0;
+}
+#img .item:hover i.cc-KOBO {
+    color: #80C342;
+}
+#img .item:hover i.cc-LBC,
+#img .item:hover i.cc-LBC-alt {
+    color: #015C47;
+}
+#img .item:hover i.cc-PINK,
+#img .item:hover i.cc-PINK-alt {
+    color: #ED31CA;
+}
+#img .item:hover i.cc-RDD,
+#img .item:hover i.cc-RDD-alt {
+    color: #ED1C24;
+}
+#img .item:hover i.cc-RISE,
+#img .item:hover i.cc-RISE-alt {
+    color: #43CEA2;
+}
+#img .item:hover i.cc-SIA,
+#img .item:hover i.cc-SIA-alt {
+    color: #00CBA0;
+}
+#img .item:hover i.cc-SLS,
+#img .item:hover i.cc-SLS-alt {
+    color: #1EB549;
+}
+#img .item:hover i.cc-SNRG,
+#img .item:hover i.cc-SNRG-alt {
+    color: #160363;
+}
+#img .item:hover i.cc-STEEM,
+#img .item:hover i.cc-STEEM-alt {
+    color: #1A5099;
+}
+#img .item:hover i.cc-STRAT,
+#img .item:hover i.cc-STRAT-alt {
+    color: #33C7F5;
+}
+#img .item:hover i.cc-SWIFT,
+#img .item:hover i.cc-SWIFT-alt {
+    color: #428BCA;
+}
+#img .item:hover i.cc-MIOTA,
+#img .item:hover i.cc-MIOTA-alt {
+    color: #43ab7f;
+}
+#img .item:hover i.cc-BCC {
+    color: darkorange;
+}
+#img .item:hover i.cc-LSK {
+    color: #1a6896;
+}
+#img .item:hover i.cc-NEO {
+    color: limegreen;
+}
+#img .item:hover i.cc-OMG {
+    color: royalblue;
+}
+#img .item:hover i.cc-QTUM {
+    color: cornflowerblue;
+}
+#img .item:hover i.cc-WAVES {
+    color: dodgerblue;
+}
+#img .item:hover i.cc-ZEC {
+    color: goldenrod;
+}

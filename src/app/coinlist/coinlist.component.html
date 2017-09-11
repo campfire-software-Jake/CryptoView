@@ -1,26 +1,91 @@
 <div class="container">
   <div class="rows">
-    <div id="img">
+    <ng-container>
 
-      <ng-container>
-        <button class="sort" (click)="sortByPrice({price:'desc'})">Desc</button>
-        <button class="sort" (click)="sortByPrice({price:'asc'})">Asc</button>
-        
-        <div class="item" *ngFor = "let coin of data">
-          <div class="icon" title="{{coin?.name}}">
-            <i class="cc-{{coin?.symbol}}"></i>
-          </div>
-          <div class="key">
-            <span class="name">{{coin?.name}}</span>
-            <input class="class" value="${{coin?.price_usd}}" readonly="">
-          </div>
+      <div class="sortButtonLayout">
+        <div class="price">
+          <button class="sort group1 greenHover" (click)="sortByPrice({price:'asc'}); shown = 'PA'">$ Asc</button>
+          <button class="sort group1 redHover" (click)="sortByPrice({price:'desc'}); shown = 'PD'">$ Desc</button>
         </div>
+        <div class="volume">
+          <button class="sort group2 greenHover" (click)="sortByVolume({volume:'asc'}); shown = 'VA'">Vol Asc</button>
+          <button class="sort group2 redHover" (click)="sortByVolume({volume:'desc'}); shown = 'VD'">Vol Desc</button>
+        </div>
+        <div class="twentyFourHour">
+          <button class="sort group3 greenHover" (click)="sortByPercentChange24h({percentChange24h:'asc'}); shown = '24A'">24h % asc</button>
+          <button class="sort group3 redHover" (click)="sortByPercentChange24h({percentChange24h:'desc'}); shown = '24D'">24h % desc</button>
+        </div>
+        <div class="sevenDay">
+          <button class="sort group4 greenHover" (click)="sortByPercentChange7d({percentChange7d:'asc'}); shown = '7A'">7d % asc</button>
+          <button class="sort group4 redHover" (click)="sortByPercentChange7d({percentChange7d:'desc'}); shown = '7D'">7d % desc</button>
+        </div>
+        <div class="oneHour">
+          <button class="sort group5 greenHover" (click)="sortByPercentChange1h({percentChange1h:'asc'}); shown = '1A'">1h % asc</button>
+          <button class="sort group5 redHover" (click)="sortByPercentChange1h({percentChange1h:'desc'}); shown = '1D'">1h % desc</button>
+        </div>
+        <div class="cap">
+          <button class="sort group6 greenHover" (click)="sortByMarketCap({marketcap:'asc'}); shown = 'MCa'">MktCap asc</button>
+          <button class="sort group6 redHover" (click)="sortByMarketCap({marketcap:'desc'}); shown = 'MCd'">MktCap desc</button>
+        </div>
+      </div>
 
+      <div class="sortDisplayContainer">
+        <div class="currentSort" *ngIf="shown === 'PD'">
+          <h2>Price Desc</h2>
+        </div>
+        <div class="currentSort" *ngIf="shown === 'PA'">
+          <h2>Price Asc</h2>
+        </div>
+        <div class="currentSort" *ngIf="shown === 'VD'">
+          <h2>Volume Desc</h2>
+        </div>
+        <div class="currentSort" *ngIf="shown === 'VA'">
+          <h2>Volume Asc</h2>
+        </div>
+        <div class="currentSort" *ngIf="shown === '24D'">
+          <h2>24h Desc</h2>
+        </div>
+        <div class="currentSort" *ngIf="shown === '24A'">
+          <h2>24h Asc</h2>
+        </div>
+        <div class="currentSort" *ngIf="shown === '7D'">
+          <h2>7d Desc</h2>
+        </div>
+        <div class="currentSort" *ngIf="shown === '7A'">
+          <h2>7d Asc</h2>
+        </div>
+        <div class="currentSort" *ngIf="shown === '1D'">
+          <h2>1h Desc</h2>
+        </div>
+        <div class="currentSort" *ngIf="shown === '1A'">
+          <h2>1h Asc</h2>
+        </div>
+        <div class="currentSort" *ngIf="shown === 'MCd'">
+          <h2>Market Cap Desc</h2>
+        </div>
+        <div class="currentSort" *ngIf="shown === 'MCa'">
+          <h2>Market Cap Asc</h2>
+        </div>
+      </div>
 
-
-      </ng-container>
-
-    </div>
+    </ng-container>
   </div>
 
+
+
+  <div id="img">
+    <ng-container>
+
+      <div class="item" *ngFor="let coin of data">
+        <div class="icon" title="{{coin?.name}}">
+          <i class="cc-{{coin?.symbol}}"></i>
+        </div>
+        <div class="key">
+          <span class="name">{{coin?.name}}</span>
+          <input class="class" value="${{coin?.price_usd}}" readonly="">
+        </div>
+      </div>
+
+    </ng-container>
+  </div>
 </div>
