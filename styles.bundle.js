@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "html, body {\r\n    padding: 0px;\r\n    margin: 0px;\r\n}\r\n\r\nbody {\r\n    height: 100%;\r\n    background-repeat: no-repeat;\r\n    background-color: #CCC;\r\n}", ""]);
+exports.push([module.i, "html, body {\r\n    padding: 0px;\r\n    margin: 0px;\r\n}\r\n\r\nbody {\r\n    height: 100%;\r\n    background-repeat: no-repeat;\r\n    background-color: #ddd;\r\n}", ""]);
 
 // exports
 
